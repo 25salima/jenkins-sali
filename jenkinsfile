@@ -1,0 +1,11 @@
+node {
+    stage('clone') {
+        git 'https://github.com/25salima/jenkins-sali.git'
+    }
+    stage('build') {
+        sh 'javac Main.java'
+    }
+    stage('run') {
+        sh 'java Main'
+    }
+}
